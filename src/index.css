@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   GOVERNMENT OF RAJASTHAN — OFFICIAL DESIGN SYSTEM
+   Colors derived from rajasthan.gov.in & India National Emblem
+   ============================================================ */
+
+:root {
+  /* Primary: Official Govt Navy Blue */
+  --gov-navy: #003366;
+  --gov-navy-dark: #001d3d;
+  --gov-navy-light: #004080;
+
+  /* India Tricolor */
+  --saffron: #FF9933;
+  --saffron-dark: #e68a00;
+  --saffron-light: #ffb366;
+  --flag-white: #FFFFFF;
+  --india-green: #138808;
+  --india-green-dark: #0d6b06;
+  --india-green-light: #1ca30e;
+
+  /* Ashoka Chakra Blue */
+  --chakra-blue: #000080;
+
+  /* Official Maroon (Rajasthan Govt) */
+  --raj-maroon: #800000;
+  --raj-maroon-dark: #5c0000;
+
+  /* Neutrals */
+  --bg-primary: #f8f9fa;
+  --bg-card: #ffffff;
+  --border: #dee2e6;
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --text-muted: #6c757d;
+  --text-light: #adb5bd;
+
+  /* Status */
+  --success: #198754;
+  --warning: #fd7e14;
+  --danger: #dc3545;
+  --info: #0d6efd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans', 'Segoe UI', -apple-system, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Government-style section heading underline */
+.gov-heading-underline {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+.gov-heading-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--saffron), var(--india-green));
+  border-radius: 2px;
+}
+
+/* Tricolor top stripe */
+.tricolor-stripe {
+  height: 4px;
+  background: linear-gradient(90deg, var(--saffron) 33.33%, var(--flag-white) 33.33%, var(--flag-white) 66.66%, var(--india-green) 66.66%);
+}
+
+/* Toast animation */
+@keyframes slideInRight {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.toast-enter {
+  animation: slideInRight 0.3s ease-out forwards;
+}
+
+/* Continuous Marquee Animation (No Scrollbars, Smooth Infinite Flow) */
+@keyframes marquee-continuous {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-content {
+  display: flex;
+  width: max-content;
+  animation: marquee-continuous 38s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+/* Print styles */
+@media print {
+  .no-print { display: none !important; }
+}
+
+/* Form input focus – govt blue ring */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--gov-navy) !important;
+  box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.15) !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: var(--gov-navy); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--gov-navy-dark); }

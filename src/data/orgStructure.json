@@ -1,0 +1,42 @@
+{
+  "hierarchy": [
+    {
+      "title": "General Body",
+      "desc": "Top-level governing authority responsible for overall direction."
+    },
+    {
+      "title": "Governing Council",
+      "desc": "Policy-making and strategic guidance body."
+    },
+    {
+      "title": "Executive Committee",
+      "desc": "Handles operational decision-making."
+    },
+    {
+      "title": "Executive Director",
+      "desc": "Leads execution and implementation."
+    },
+    {
+      "title": "Programmes Director",
+      "desc": "Oversees program planning and execution."
+    },
+    {
+      "title": "Programmes Coordinator",
+      "desc": "Coordinates field-level implementation."
+    }
+  ],
+  "regions": [
+    {
+      "title": "CRRC Ajmer",
+      "sub": "Ajmer & Udaipur Division"
+    },
+    {
+      "title": "WRRC Jodhpur",
+      "sub": "Jodhpur & Bikaner Division"
+    },
+    {
+      "title": "ERRC Kota",
+      "sub": "Bharatpur & Kota Division"
+    }
+  ]
+}
